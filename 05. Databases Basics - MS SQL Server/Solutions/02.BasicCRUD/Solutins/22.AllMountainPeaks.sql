@@ -1,0 +1,2 @@
+SELECT DISTINCT PeakName
+FROM Peaks;

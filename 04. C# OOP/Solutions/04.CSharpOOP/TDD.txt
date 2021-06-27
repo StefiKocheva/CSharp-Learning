@@ -1,0 +1,4 @@
+1. The same as Code-First Development, but first write tests, then code based on them.
+
+2. More enge cases because if you have written the code, you know what isn't working 
+so you don't make a test for it.
