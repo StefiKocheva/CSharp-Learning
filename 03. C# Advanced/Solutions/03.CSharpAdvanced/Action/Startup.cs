@@ -14,6 +14,9 @@
             }; // Action with more than one parameter
 
             cw(4);
+            {
+
+            }
 
             indroduce("Nikolay", "Stoyanov", 15);
         }
