@@ -1,0 +1,8 @@
+﻿<!--<cache vary-by-user="true">}
+<h1>@User.Identity.Name</h1
+<h1>@DateTime.UtcNow</h1>
+</cache>-->
+<cache vary-by-query="id" expires-sliding="new TimeSpan(0, 0, 5)">
+    <h1>@User.Identity.Name</h1>
+    <h1>@DateTime.UtcNow</h1>
+</cache>

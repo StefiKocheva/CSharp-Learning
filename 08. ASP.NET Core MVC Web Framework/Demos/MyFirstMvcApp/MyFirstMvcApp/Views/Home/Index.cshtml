@@ -1,0 +1,78 @@
+﻿@using MyFirstMvcApp.Services
+@using MyFirstMvcApp.Services
+@model IndexViewModel
+@inject IUsersService UsersService
+@inject ICounterService Counter
+@{
+    // this.Layout = null; I can set it to null or change the layout.
+    ViewData["Title"] = "Home Page";
+    ViewData["Description"] = "Home Page";
+    var someDbValue = "<script>alert('test')</script>";
+}
+
+<h1>
+    @ViewData["Stefi"]
+</h1>
+<div>
+    @Counter.GetCount()
+</div>
+
+@for (int i = 0; i < 10; i++)
+{
+    <div class="findMe"></div>
+}
+
+@foreach (var item in this.Model.Usernames)
+{
+    // comment
+    <span>@(Model.Usernames.Count())</span>
+    <span></span>
+    /*
+        comment
+    */
+}
+
+@* comment *@
+
+<!-- html comment -->
+@section MenuItems {
+    @if (DateTime.UtcNow.DayOfWeek == DayOfWeek.Thursday)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="https://softuni.bg">Softuni</a>
+        </li>
+    }
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="https://google.com">Google</a>
+    </li>
+}
+
+@section Scripts {
+    <script>
+
+    </script>
+}
+
+@*
+    @Html.TextBox("")
+    @Html.TextBoxFor("")
+    @await Html.PartialAsync("_UsersListPartial")
+*@
+
+@using (Html.BeginForm())
+{
+    @Html.DisplayNameFor(x => x.Input123)
+    @Html.EditorFor(x => x.Input123)
+}
+
+<h1 greeting-name="Ivo">Hello!</h1>*
+
+<partial name="_UsersListPartial" for="Usernames" />
+
+<vc:latest-user text=""></vc:latest-user>
+
+@section Scripts{ 
+    <script>
+        $(".findMe").remove();
+    </script>
+}
